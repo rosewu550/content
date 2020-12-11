@@ -1,0 +1,147 @@
+body::-webkit-scrollbar,
+body.i-theme-ant::-webkit-scrollbar,
+body ::-webkit-scrollbar,
+body.i-theme-ant ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-thumb,
+body.i-theme-ant::-webkit-scrollbar-thumb,
+body ::-webkit-scrollbar-thumb,
+body.i-theme-ant ::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: #999999;
+  box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+body.i-theme-ant::-webkit-scrollbar-thumb:hover,
+body ::-webkit-scrollbar-thumb:hover,
+body.i-theme-ant ::-webkit-scrollbar-thumb:hover {
+  -webkit-box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+}
+
+body::-webkit-scrollbar-thumb:active,
+body.i-theme-ant::-webkit-scrollbar-thumb:active,
+body ::-webkit-scrollbar-thumb:active,
+body.i-theme-ant ::-webkit-scrollbar-thumb:active {
+  -webkit-box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 9px rgba(0, 0, 0, 0.1);
+  background-color: #666666;
+  opacity: 1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit;
+}
+
+section {
+  padding: 0 30px;
+}
+
+section header {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+
+section main > div > table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  text-align: left;
+  width: 100%;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
+  max-width: 100vw;
+  word-break: break-all;
+}
+
+section main > div > table thead {
+  border-bottom: 1px solid white;
+  background: #f3f7fb;
+  color: #909399;
+}
+
+section main > div > table :not(thead) tr {
+  border-bottom: 1px solid #ebeef5;
+}
+
+section main > div > table :not(thead) tr:hover {
+  background: rgba(228, 227, 227, 0.1);
+}
+
+section main > div > table th div,
+section main > div > table td div {
+  display: block;
+  padding: 1em .5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+section main > div > table th > div {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+section main > div > pre {
+  display: block;
+  width: 100%;
+  max-width: 100vw;
+  overflow: auto;
+  letter-spacing: 0.3px;
+  font-size: 92.5%;
+  color: #212529;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  border: 1px solid white;
+  padding: 20px;
+  background: rgba(228, 227, 227, 0.1);
+}
+
+section main > div > pre > div {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: green;
+  left: 1450px;
+}
+
+section main > div > pre > div:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+section main span {
+  display: block;
+  color: black;
+  width: 100%;
+  max-width: 75vw;
+  word-break: break-all;
+}
+/*# sourceMappingURL=AiActionModel.css.map */

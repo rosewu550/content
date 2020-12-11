@@ -1,0 +1,217 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiActionModel</title>
+    <link rel="stylesheet" href="css/AiActionModel.css">
+</head>
+
+<body>
+
+    <section>
+        <header class="title">
+            <h3>车辆检测接口调用文档</h3>
+        </header>
+        <aside>
+            <div></div>
+        </aside>
+
+        <main>
+            <div>
+                <h4>简要描述:</h4>
+                <ul>
+                    <li><span>根据上传的图片，识别图片中是否含有车辆及车牌，如果有则用框标注出来</span></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>请求URL:</h4>
+                <ul>
+                    <li><span>http://eplattest.baowugroup.com/acv-service/service/api/yolov3_darknet53_vehicles/v1/predict/</span></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>请求方式:</h4>
+                <ul>
+                    <li><span>POST</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>请求参数:</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div>参数名</div>
+                            </th>
+                            <th>
+                                <div>类型</div>
+                            </th>
+                            <th>
+                                <div>必选</div>
+                            </th>
+                            <th>
+                                <div>说明</div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td data-label = "参数名">
+                            <div>imagesBase64</div>
+                        </td>
+                        <td data-label = "类型">
+                            <div>string</div>
+                        </td>
+                        <td data-label = "必选">
+                            <div>是</div>
+                        </td>
+                        <td data-label = "说明">
+                            <div>图像base64编码后的字符串，图像需是 JPG、PNG、BMP 其中之一的格式</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>imagesBase64</div>
+                        </td>
+                        <td>
+                            <div>string</div>
+                        </td>
+                        <td>
+                            <div>是</div>
+                        </td>
+                        <td>
+                            <div>图像base64编码后的字符串，图像需是 JPG、PNG、BMP 其中之一的格式</div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div>
+                <h4>请求示例:</h4>
+                <pre>
+import base64
+import io
+import os
+import requests
+with open(file, 'rb') as f:
+img = base64.b64encode(f.read())
+img_str = img.decode('utf-8')
+params['imageBase64'] = img_str
+response = requests.post(url, data=json.dumps(params), headers={'Content-Type': 'application/json'})</pre>
+            </div>
+
+            <div>
+                <h4>返回参数:</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div>参数名</div>
+                            </th>
+                            <th>
+                                <div>类型</div>
+                            </th>
+                            <th>
+                                <div>说明</div>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td>
+                            <div>imagesBase64</div>
+                        </td>
+                        <td>
+                            <div>string</div>
+                        </td>
+                        <td>
+                            <div>图像base64编码后的字符串，图像需是 JPG、PNG、BMP 其中之一的格式</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>imagesBase64</div>
+                        </td>
+                        <td>
+                            <div>string</div>
+                        </td>
+                        <td>
+                            <div>图像base64编码后的字符串，图像需是 JPG、PNG、BMP 其中之一的格式</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <h4>返回示例:</h4>
+                <pre>
+                    <div></div>
+{
+  "msg": "",
+  "results": [
+    {
+      "items": [
+        {
+          "item": "car",
+          "itemcode": 0,
+          "itemconf": 0.911516547203064,
+          "itemcoord": {
+            "height": 49.2125244140625,
+            "width": 75.9052734375,
+            "x": 1192.0728759765625,
+            "y": 655.0894775390625
+          }
+        },
+        {
+          "item": "car",
+          "itemcode": 0,
+          "itemconf": 0.8918246030807495,
+          "itemcoord": {
+            "height": 68.1363525390625,
+            "width": 129.7958984375,
+            "x": 1367.6236572265625,
+            "y": 712.3087768554688
+          }
+        },
+        {
+          "item": "car",
+          "itemcode": 0,
+          "itemconf": 0.8741612434387207,
+          "itemcoord": {
+            "height": 37.7635498046875,
+            "width": 40.3515625,
+            "x": 1025.802978515625,
+            "y": 582.5155639648438
+          }
+        },
+        {
+          "item": "truck",
+          "itemcode": 1,
+          "itemconf": 0.8666292428970337,
+          "itemcoord": {
+            "height": 297.6158447265625,
+            "width": 352.0744171142578,
+            "x": 225.6188201904297,
+            "y": 612.2758178710938
+          }
+        }
+      ]
+    }
+  ],
+  "status": "0"
+}
+                </pre>
+            </div>
+        </main>
+
+    </section>
+
+</body>
+
+</html>
