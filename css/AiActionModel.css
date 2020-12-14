@@ -5,7 +5,7 @@ body.i-theme-ant ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
-
+/* 测试 */
 body::-webkit-scrollbar-thumb,
 body.i-theme-ant::-webkit-scrollbar-thumb,
 body ::-webkit-scrollbar-thumb,
@@ -118,7 +118,8 @@ section main > div > pre {
   letter-spacing: 0.3px;
   font-size: 92.5%;
   color: #212529;
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas,
+ "Liberation Mono", "Courier New", monospace;
   border: 1px solid white;
   padding: 20px;
   background: rgba(228, 227, 227, 0.1);
@@ -143,5 +144,6 @@ section main span {
   width: 100%;
   max-width: 75vw;
   word-break: break-all;
+  color: red;
 }
 /*# sourceMappingURL=AiActionModel.css.map */
